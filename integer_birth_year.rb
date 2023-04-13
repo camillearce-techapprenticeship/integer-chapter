@@ -3,7 +3,7 @@
 # Then, figure out the current year. You can (but don't have to) use the Date class to determine the year today.
 # Then subtract the person's age from the current year and display the approximate year they were born in.
 # Note that we're not taking specific birthdays into account, so the year might be off.
-# 
+#
 # Ex:
 #
 # Assuming that the current year is 2023,
@@ -20,4 +20,10 @@
 # Then the output should be:
 # "Nice! You were born in approximately 2013."
 
+require "date"
 p "How old are you?"
+answer = gets.chomp.to_i
+date = Date.today
+
+year_born = date.year - answer
+p "Nice! you were born in approximately #{year_born}!"
